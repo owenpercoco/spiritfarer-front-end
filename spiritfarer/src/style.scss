@@ -1,0 +1,77 @@
+$grid: 8px;
+.form-control {
+    display: inline-flex;
+    padding: #{$grid * 3};
+    border: solid 1px black;
+    margin: $grid;
+    .input-control {
+        padding: #{$grid / 2};
+        display: flex;
+        flex-direction: row;
+        gap: $grid;
+    }
+    &.saved {
+        background: green;
+        transition: background 1s ease-out;
+    }
+    .bottom-row {
+        flex-basis: 100%
+    }
+}
+
+.give-me-stuff {
+    text-align: left;
+    padding-left: #{$grid * 4};
+    p {
+        padding-left: #{$grid * 4}
+    }
+}
+
+.the-oven-container {
+    border: 1px solid black;
+    width: 75%;
+    margin: auto;
+}
+.the-oven-form {
+    width: 400px; // Adjust as needed for your desired size
+    height: 400px; // Ensure the form is a square
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    .bottom-row {
+        padding:  #{$grid * 4};
+    }
+    .big-square {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        .top-row {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+        .left-square, .right-square {
+            width: 100%;
+            height: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .input-control-square {
+                width: 80%;
+                height: 80%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid gray;
+                select {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
